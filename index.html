@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backpacker's Haven</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header style="opacity: 80%; background-color: black;">
+    <img src="dora.jfif" alt="Dora" style="height: 35px; width: 35px;">
+    <h1 style="display: inline-block; margin-bottom: 0px;">Backpacker's <span style="font-style: italic;font-weight:normal;">Haven</span></h1>
+    <h3 style="margin-top: 0px;">Welcome to the <span style="font-style: italic;">Haven</span> for travel enthusiasts!!</h3>
+  </header>
+  
+  <main>
+    <section>
+      <section id="chat-container"></section>
+      <br>
+  
+      <textarea id="setup-textarea" placeholder="Enter the city you wish to travel to!!"></textarea>
+      <div id="send-btn-container">
+        <button id="send-btn" onclick="flyAeroplane()">
+          Send<img src="aero.png" alt="Aeroplane Icon" />
+        </button>
+      </div>
+      <div id = "image-container"></div>
+    </section>
+  </main> 
+
+  <script src="script.js" type="module"></script>
+  <script>
+  function flyAeroplane() {
+    const aeroplane = document.createElement("img");
+    aeroplane.src = "aero.png"; 
+    aeroplane.classList.add("aeroplane-animation");
+    document.getElementById("send-btn-container").appendChild(aeroplane);
+  
+   
+    aeroplane.addEventListener("animationend", function () {
+      document.getElementById("send-btn-container").removeChild(aeroplane);
+    });
+  }
+  </script>
+
+
+<footer>
+  &copy; 2023 Backpacker's Haven All rights reserved
+</footer>
+
+</body>
+</html>

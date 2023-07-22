@@ -1,0 +1,147 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-image: url("1318008.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    padding: .8em;
+    font-size: .7em;
+    text-align: center;
+}
+
+  section {
+    margin: 0 auto;
+    background-color: var(--light);
+    border-radius: var(--border-rad-lg);
+    padding: .25em 1em;
+    box-shadow: 0px 1px 18px 3px var(--dark);
+    max-width: 1300px;
+}
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  #chat-container {
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: first baseline;
+  }
+  
+  .chat-box {
+    border: 1px solid #ccc;
+    flex: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .user-message {
+   
+    color: white; 
+    align-self: flex-start; 
+    flex: 1;
+    max-height: 300px;
+    max-width: 800px;
+    overflow-y: auto;
+    border-radius: 40%;
+  }
+  
+  .bot-message {
+   
+    color: white; 
+    align-self: flex-end; 
+    flex: 1;
+    max-width: 1200px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  #chat-container {
+    background-color: black;opacity: 70%; 
+    border-radius: 10px;
+    padding: 20px;
+  }
+  #setup-textarea {
+    width: 50%;
+    height: 125px; 
+    margin-bottom: 10px; 
+    background-color: black;opacity: 70%;
+    color: white;
+  }
+
+  #send-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  #send-btn-container {
+  position: relative;
+}
+
+#send-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 65px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: double;
+}
+
+#send-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes flyAnimation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw - 30px), calc(-100vh + 30px));
+    opacity: 0;
+  }
+}
+
+.aeroplane-animation {
+  animation: flyAnimation 2s linear; 
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  pointer-events: none; 
+}
+
+div#image-container{
+  border-style: solid;
+  height: 512px;
+  width: 512px;
+  background-color: black;
+  margin-left: 420px;
+  opacity: 70%;
+}
